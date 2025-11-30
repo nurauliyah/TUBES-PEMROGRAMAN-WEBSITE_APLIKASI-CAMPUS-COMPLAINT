@@ -1,0 +1,8 @@
+<?php
+try {
+    $conn = new PDO("sqlite:campus.db");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Database error: " . $e->getMessage());
+}
+?>
